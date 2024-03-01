@@ -13,7 +13,7 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @Builder
-@Document("JobListing")
+@Document("jobListing")
 public class JobListing {
 
     @Id

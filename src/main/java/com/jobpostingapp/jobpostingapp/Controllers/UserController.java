@@ -37,8 +37,11 @@ public class UserController {
 
         User registered = userService.getUser(user.getId());
         if(registered != null){
-            return true;
+            if(passwordEncoder.matches(registered.getPassword(), userService.getUser(user.getId()).getPassword())){
+                return true;
+            }
         }
+
 
         return false;
     }

@@ -38,6 +38,6 @@ public class ApplicationService {
         if(jobListing == null){
             throw new JobListingNotFoundException("Job Not Found");
         }
-        return applicationRepository.findByJobId(listingId);
+        return applicationRepository.findAllByJobListing(listingId);
     }
 }
